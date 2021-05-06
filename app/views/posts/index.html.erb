@@ -1,0 +1,40 @@
+
+<div class="menu">
+<h1>Instadrame</h1> <div class="NewPost"><%=  link_to 'Poster', new_post_path %></div>
+</div>
+<p id="notice"><%= notice %></p>
+<div class="PostContainer"> 
+<div class="table">
+   <tbody>
+    
+    <% @posts.each do |post| %>
+      <div class="post">
+        <div class="User"> 
+        <%= post.user %>
+        <div class="options"> 
+        <div class="option">
+        <%= link_to 'Edit', edit_post_path(post) %>
+</div>
+         <div class="option">
+       
+       </div>
+       </div>
+        </div>
+
+       <div class="Image"> 
+          <%= image_tag post.image, :class => "images" %>
+        </div>
+        
+        <div class="Description"> 
+        <%= post.description %>
+       </div>
+  </div>
+     
+     
+    <% end %>
+  </tbody>
+</div>
+</div>
+<br>
+
+
